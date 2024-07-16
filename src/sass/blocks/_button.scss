@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 26px;
+  padding: 8px 22px;
+  background-color: $black;
+  display: flex;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  color: $white-color;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn_more {
+  border-radius: 26px;
+  padding: 8px 22px;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  display: flex;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  color: $black;
+  align-items: center;
+}
+
+.btn_tab {
+  border: 1px solid $black;
+  border-radius: 26px;
+  padding: 8px 22px;
+  background: transparent;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+
+  &_active {
+    background: $black;
+    color: $white-color;
+  }
+}

@@ -1,0 +1,60 @@
+.reviews {
+  position: relative;
+  padding-top: 48px;
+  margin-bottom: 39px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    margin-bottom: 38px;
+  }
+
+  &__items {
+    display: flex;
+    gap: 29px;
+    border: 2px solid $black;
+    border-radius: 72px;
+    padding: 50px;
+  }
+
+  &__item {
+    width: 383px;
+
+    &__descr {
+      margin-left: auto;
+      width: 312px;
+      margin-bottom: 24px;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__user-img {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__user-name {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    &__user-subname {
+      font-weight: 200;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 100%;
+    }
+
+    &:not(:last-child) {
+      border-right: 2px solid $black;
+      padding-right: 14px;
+    }
+  }
+}

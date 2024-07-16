@@ -1,0 +1,119 @@
+.pricing {
+  position: relative;
+  margin-bottom: 39px;
+
+  .container {
+    max-width: 1602px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    background: #e2e6ee;
+    border-radius: 72px;
+    padding: 38px 0 55px;
+  }
+
+  &__inner {
+    max-width: 1310px;
+    margin: 0 auto;
+  }
+
+  &__subtitle,
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    max-width: 516px;
+  }
+
+  &__header {
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 43px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__item {
+    border: 2px solid $black;
+    border-radius: 32px;
+    width: 318px;
+    background: $white-color;
+    padding: 36px 24px 24px;
+
+    &__title {
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $black;
+      margin-bottom: 24px;
+    }
+
+    &__price {
+      font-weight: 800;
+      font-size: 64px;
+      text-transform: capitalize;
+      line-height: 1;
+      padding-bottom: 34px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid $black;
+
+      span {
+        font-weight: 400;
+        font-size: 20px;
+        color: $black;
+        line-height: 1;
+      }
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    &__list-item {
+      position: relative;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 250%;
+      color: $black;
+      display: flex;
+      align-items: center;
+      padding-left: 28px;
+
+      &::before {
+        content: url("../assets/icons/check1-icon.svg");
+        position: absolute;
+        left: 0;
+        top: 3px;
+      }
+    }
+
+    &__btn-select {
+      margin: 24px auto 0;
+    }
+  }
+
+  &__item-pro {
+    background: $light-blue;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+  }
+}

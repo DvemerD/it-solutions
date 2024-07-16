@@ -1,0 +1,68 @@
+.info {
+  padding-top: 48px;
+  margin-bottom: 39px;
+
+  &__wrapper {
+    border: 2px solid $black;
+    border-radius: 72px;
+    padding: 60px;
+    display: grid;
+    grid-template: 1fr / repeat(4, 248px);
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    border: 2px solid $black;
+    border-radius: 32px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+
+    &:nth-of-type(1) {
+      background: $light-green;
+    }
+
+    &:nth-of-type(2) {
+      background: $light-red;
+    }
+
+    &:nth-of-type(3) {
+      background: $light-purple;
+    }
+
+    &:nth-of-type(4) {
+      background: $light-blue;
+    }
+
+    &__img {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__num {
+      font-weight: 700;
+      font-size: 48px;
+      text-transform: capitalize;
+      line-height: 1;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1;
+      color: $black;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -36px;
+      border-right: 2px solid $black;
+      height: 100%;
+    }
+  }
+}

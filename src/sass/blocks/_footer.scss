@@ -1,0 +1,176 @@
+.footer {
+  border-radius: 72px 72px 0 0;
+  background: $black;
+
+  &__wrapper {
+    padding: 48px 0 24px;
+    color: $white-color;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+    display: block;
+
+    img {
+      width: 74px;
+      height: 29px;
+    }
+  }
+
+  &__descr {
+    color: $white-color;
+    max-width: 428px;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  &__input-wrapp {
+    border: 2px solid #fff;
+    border-radius: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 12px 0;
+    width: 510px;
+  }
+
+  &__input {
+    font-weight: 400;
+    font-size: 20px;
+    color: $white-color;
+    border: none;
+    background: transparent;
+    outline: none;
+
+    &::placeholder {
+      color: $white-color;
+      all: unset;
+    }
+
+    &::-moz-placeholder {
+      color: $white-color;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white-color;
+    }
+
+    &:-moz-placeholder {
+      color: $white-color;
+    }
+  }
+
+  &__btn {
+    background: $white-color;
+    color: $black;
+    border: none;
+
+    img {
+      mix-blend-mode: difference;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: capitalize;
+    margin-bottom: 34px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    &::before {
+      content: url("../assets/icons/open-icon.svg");
+      width: 24px;
+      height: 24px;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 20px;
+      text-decoration: none;
+      color: $white-color;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    address {
+      all: unset;
+    }
+
+    a,
+    address {
+      display: block;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 20px;
+      color: $white-color;
+      text-decoration: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+
+    &__item {
+      border-radius: 100%;
+      padding: 8px;
+      width: 40px;
+      height: 40px;
+      background: $white-color;
+
+      img {
+        mix-blend-mode: difference;
+      }
+    }
+  }
+}

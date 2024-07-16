@@ -1,0 +1,49 @@
+.portfolio {
+  position: relative;
+  width: 100%;
+  padding-top: 48px;
+  margin-bottom: 39px;
+
+  &__inner {
+    background: #e2e6ee;
+    border-radius: 72px;
+  }
+
+  .container {
+    max-width: 1330px;
+  }
+
+  &__wrapper {
+    padding: 38px 0 64px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
+  &__tabs {
+    &__btns {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__tab-content {
+    display: grid;
+    grid-template-columns: repeat(4, 318px);
+    gap: 20px;
+
+    &__item {
+      border: 2px solid $black;
+      border-radius: 32px;
+      width: 318px;
+      height: 318px;
+      background: $light-purple;
+      display: grid;
+      place-items: center;
+    }
+  }
+}

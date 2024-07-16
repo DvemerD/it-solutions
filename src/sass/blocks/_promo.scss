@@ -1,0 +1,154 @@
+.promo {
+  position: relative;
+  border-radius: 0 0 72px 72px;
+  background-color: #e2e6ee;
+  margin-bottom: 39px;
+
+  &__wrapper {
+    padding: 228px 0 228px 54px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__item {
+    border: 2px solid $black;
+    border-radius: 28px;
+    padding: 20px 42px;
+    width: 180px;
+    height: 136px;
+  }
+
+  &__items-first>&__item {
+    &:nth-of-type(1) {
+      background-color: #4c5770;
+    }
+
+    &:nth-of-type(2) {
+      background-color: #ffecf3;
+      border-radius: 68px;
+    }
+
+    &:nth-of-type(3) {
+      background-color: #fff;
+    }
+  }
+
+  &__content {
+    max-width: 516px;
+    flex-shrink: 0;
+  }
+
+  &__links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    border-radius: 26px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: $black;
+    display: grid;
+    place-items: center;
+  }
+
+  &__subtitle,
+  &__title,
+  &__descr {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    height: 136px;
+    flex-shrink: 0;
+  }
+
+  &__items-wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__items-wrapp>&__items-first,
+  &__items-wrapp>&__items-second,
+  &__items-wrapp>&__items-third {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  &__item-long {
+    display: flex;
+    font-weight: 700;
+    font-size: 40px;
+    color: $black;
+    width: auto;
+    align-items: center;
+    gap: 21px;
+  }
+
+  &__items-wrapp>&__items-first>&__item {
+    &:nth-of-type(1) {
+      background: $light-blue;
+    }
+
+    &:nth-of-type(2) {
+      background: $light-green;
+    }
+
+    &:nth-of-type(3) {
+      background: $light-red;
+    }
+
+    &:nth-of-type(4) {
+      background: #4c5770;
+    }
+  }
+
+  &__items-wrapp>&__items-second>&__item {
+    &:nth-of-type(1) {
+      background: $light-purple;
+    }
+
+    &:nth-of-type(2) {
+      background: #4c5770;
+    }
+
+    &:nth-of-type(3) {
+      background: $light-red-2;
+
+    }
+
+    &:nth-of-type(4) {
+      background: $accent-color;
+    }
+  }
+
+  &__items-wrapp>&__items-third>&__item {
+    &:nth-of-type(1) {
+      background: $light-red;
+    }
+
+    &:nth-of-type(2) {
+      background: $light-blue;
+    }
+
+    &:nth-of-type(3) {
+      background: $light-purple;
+      border-radius: 68px;
+    }
+
+    &:nth-of-type(4) {
+      background: $white-color;
+    }
+  }
+}
