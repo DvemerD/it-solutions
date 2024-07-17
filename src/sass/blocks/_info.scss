@@ -10,6 +10,9 @@
     grid-template: 1fr / repeat(4, 248px);
     justify-content: space-between;
   }
+  .arrow {
+    left: 0;
+  }
 
   &__item {
     position: relative;
@@ -71,10 +74,6 @@
   .info {
     .container {
       position: relative;
-    }
-
-    .arrow {
-      left: 0;
     }
 
     &__wrapper {

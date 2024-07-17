@@ -1,5 +1,5 @@
-function slider() {
-  var swiper = new Swiper(".my-swiper", {
+function slider(selector) {
+  const swiper = new Swiper(selector, {
     slidesPerView: "auto",
     spaceBetween: 12,
     mousewheel: true,

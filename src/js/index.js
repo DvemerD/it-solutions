@@ -3,5 +3,5 @@ import slider from "./blocks/slider.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   menu();
-  slider();
+  slider(".swiper_clients");
 });
