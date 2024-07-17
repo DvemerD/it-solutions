@@ -56,3 +56,42 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .about {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    &__wrapper {
+      padding: 24px;
+    }
+
+    &__content {
+      max-width: auto;
+      flex-shrink: 1;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding-top: 24px;
+    margin-bottom: 26px;
+
+    &__wrapper {
+      border-radius: 22px;
+      padding: 24px 8px;
+    }
+
+    &__items {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 32px;
+    }
+  }
+}

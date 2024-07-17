@@ -11,16 +11,16 @@
     background: #e2e6ee;
     border-radius: 72px;
     padding: 75px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 24px;
   }
 
   &__content {
     border: 2px solid $black;
     border-radius: 32px;
-    width: 636px;
-    height: 720px;
+    max-width: 636px;
     background-color: $white-color;
     padding: 38px 60px 60px;
   }
@@ -51,27 +51,24 @@
   }
 
   &__info {
-    position: relative;
     background: $black;
     border-radius: 39px;
-    width: 540px;
-    height: 285px;
-    padding: 28px;
+    max-width: 540px;
+    padding: 0 28px 28px;
     margin-bottom: 74px;
 
     &__inner {
-      position: absolute;
-      top: -28px;
+      margin-top: -28px;
       border: 2px solid $black;
       border-radius: 32px;
       background-color: $white-color;
-      max-width: 484px;
       padding: 48px 48px 36px;
     }
 
     &__title {
       font-size: 36px;
       text-transform: capitalize;
+      margin-bottom: 24px;
     }
 
     &__descr {
@@ -84,5 +81,83 @@
     flex-wrap: wrap;
     gap: 16px;
     max-width: 614px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services {
+    &__wrapper {
+      flex-wrap: wrap;
+      gap: 58px;
+      justify-content: center;
+    }
+
+    &__tabs-wrapp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    &__wrapper {
+      padding: 24px;
+    }
+
+    &__content {
+      max-width: auto;
+      width: 100%;
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .services {
+    margin-bottom: 28px;
+
+    .container {
+      padding: 0;
+    }
+
+    &__wrapper {
+      padding: 0 0 58px;
+      gap: 28px;
+    }
+
+    &__content {
+      padding: 28px 12px;
+    }
+
+    &__img {
+      img {
+        width: 204px;
+        height: 204px;
+      }
+    }
+
+    &__info {
+      padding: 0 10px 10px;
+      margin-bottom: 18px;
+
+      &__inner {
+        margin-top: -10px;
+        padding: 28px 12px 12px;
+      }
+    }
+
+    &__tabs {
+      padding: 0 12px
+    }
+
+    &__tab {
+      font-size: 14px;
+      padding: 8px 22px;
+    }
   }
 }

@@ -181,6 +181,9 @@
 
 @media (max-width: 576px) {
   .promo {
+    border-radius: 0 0 42px 42px;
+    margin-bottom: 26px;
+
     &__wrapper {
       gap: 24px;
       padding-top: 97px;
@@ -190,7 +193,6 @@
 
 @media (max-width: 432px) {
   .promo {
-
     &__items-wrapp>&__items-first,
     &__items-wrapp>&__items-second,
     &__items-wrapp>&__items-third {
