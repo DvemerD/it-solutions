@@ -1,5 +1,6 @@
 .clients {
   position: relative;
+  margin-bottom: 87px;
 
   &__title {
     margin-bottom: 48px;
@@ -42,6 +43,7 @@
 @media (max-width: 576px) {
   .clients {
     padding: 0;
+    margin-bottom: 54px;
 
     &__wrapper {
       padding: 28px 0 78px;
