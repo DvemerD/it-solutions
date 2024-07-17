@@ -51,14 +51,17 @@
   }
 
   &__info {
+    position: relative;
     background: $black;
     border-radius: 39px;
     max-width: 540px;
-    padding: 0 28px 28px;
+    padding: 0 28px;
     margin-bottom: 74px;
 
     &__inner {
-      margin-top: -28px;
+      position: inherit;
+      top: -28px;
+      // margin-top: -28px;
       border: 2px solid $black;
       border-radius: 32px;
       background-color: $white-color;
@@ -113,6 +116,11 @@
 
     &__info {
       max-width: 100%;
+      position: static;
+
+      &__inner {
+        position: static;
+      }
     }
   }
 }
@@ -136,6 +144,7 @@
 
     &__img {
       margin-bottom: 28px;
+
       img {
         width: 204px;
         height: 204px;

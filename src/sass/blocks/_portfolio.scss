@@ -36,12 +36,45 @@
     grid-template-columns: repeat(4, 318px);
     gap: 20px;
 
+    &__inner {
+      display: contents;
+
+      &:nth-of-type(1) {
+        * {
+          background: $light-purple;
+        }
+      }
+
+      &:nth-of-type(2) {
+        * {
+          background: $light-blue;
+        }
+      }
+
+      &:nth-of-type(3) {
+        * {
+          background: $light-green;
+        }
+      }
+
+      &:nth-of-type(4) {
+        * {
+          background: $light-red-2;
+        }
+      }
+    }
+
+    &__inner> :nth-of-type(1) {
+      .item {
+        background: $light-purple;
+      }
+    }
+
     &__item {
       border: 2px solid $black;
       border-radius: 32px;
       width: 318px;
       height: 318px;
-      background: $light-purple;
       display: grid;
       place-items: center;
     }
