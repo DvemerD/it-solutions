@@ -83,5 +83,20 @@
       border-radius: 22px;
       padding: 24px 24px 72px;
     }
+    &__item {
+      &__descr {
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .reviews {
+    &__item {
+      &__descr {
+        width: 60%;
+      }
+    }
   }
 }
