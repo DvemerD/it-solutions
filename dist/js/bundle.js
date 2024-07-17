@@ -2,10 +2,12 @@
 
 var _menu = _interopRequireDefault(require("./blocks/menu.js"));
 var _slider = _interopRequireDefault(require("./blocks/slider.js"));
+var _scrollToAnchor = _interopRequireDefault(require("./modules/scrollToAnchor.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 window.addEventListener("DOMContentLoaded", function () {
   (0, _menu["default"])();
   (0, _slider["default"])(".swiper_clients");
+  (0, _scrollToAnchor["default"])();
 });
 "use strict";
 
@@ -66,3 +68,37 @@ function enableScroll() {
   document.body.style.paddingRight = "";
   document.body.style.overflow = "auto";
 }
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+function scrollToAnchor() {
+  var links = document.querySelectorAll('[href^="#"]'),
+    speed = 0.3;
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var widthTop = document.documentElement.scrollTop,
+        hash = this.hash,
+        toBlock = document.querySelector(hash).getBoundingClientRect().top,
+        start = null;
+      requestAnimationFrame(step);
+      function step(time) {
+        if (start === null) {
+          start = time;
+        }
+        var progress = time - start,
+          r = toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock);
+        document.documentElement.scrollTo(0, r);
+        if (r != widthTop + toBlock) {
+          requestAnimationFrame(step);
+        } else {
+          location.hash = hash;
+        }
+      }
+    });
+  });
+}
+var _default = exports["default"] = scrollToAnchor;
