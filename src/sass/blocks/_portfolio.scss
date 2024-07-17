@@ -47,3 +47,58 @@
     }
   }
 }
+
+@media (max-width: 1430px) {
+  .portfolio {
+    &__tab-content {
+      grid-template-columns: repeat(auto-fit, minmax(318px, 1fr));
+
+      &__item {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio {
+    &__wrapper {
+      padding: 38px 20px 64px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio {
+    &__wrapper {
+      padding: 28px 12px 55px;
+    }
+
+    &__inner {
+      border-radius: 42px;
+    }
+
+    &__tabs {
+      &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+    }
+
+    &__tab {
+      font-size: 14px;
+      padding: 8px 22px;
+    }
+
+    &__tab-content {
+      gap: 18px;
+    }
+
+    &__title {
+      margin-bottom: 28px;
+    }
+  }
+}
