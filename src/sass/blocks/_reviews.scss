@@ -80,6 +80,7 @@
 @media (max-width: 576px) {
   .reviews {
     &__items {
+      grid-template-columns: repeat(1, minmax(300px, 1fr));
       border-radius: 22px;
       padding: 24px 24px 72px;
     }

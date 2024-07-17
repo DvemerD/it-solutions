@@ -1,5 +1,6 @@
 "use strict";
 
+var _form = _interopRequireDefault(require("./blocks/form.js"));
 var _menu = _interopRequireDefault(require("./blocks/menu.js"));
 var _slider = _interopRequireDefault(require("./blocks/slider.js"));
 var _scrollToAnchor = _interopRequireDefault(require("./modules/scrollToAnchor.js"));
@@ -8,7 +9,41 @@ window.addEventListener("DOMContentLoaded", function () {
   (0, _menu["default"])();
   (0, _slider["default"])(".swiper_clients");
   (0, _scrollToAnchor["default"])();
+  (0, _form["default"])();
 });
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+function form() {
+  var emailInput = document.getElementById("emailInput");
+  var errorMessage = document.getElementById("error-message");
+  var btn = document.getElementById("btn_submit");
+  function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+  btn.addEventListener("click", function () {
+    if (validateEmail(emailInput.value)) {
+      console.log("Subscribed email:", emailInput.value);
+      emailInput.value = "";
+      errorMessage.textContent = "";
+      alert("Thank you for subscribing!");
+    } else {
+      errorMessage.textContent = "Please enter a valid email address.";
+    }
+  });
+  emailInput.addEventListener("input", function () {
+    if (validateEmail(emailInput.value)) {
+      errorMessage.textContent = "";
+    } else {
+      errorMessage.textContent = "Please enter a valid email address.";
+    }
+  });
+}
+var _default = exports["default"] = form;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
