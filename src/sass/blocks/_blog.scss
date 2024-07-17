@@ -10,7 +10,7 @@
   &__wrapper {
     background: #e2e6ee;
     border-radius: 72px;
-    padding: 38px 0 55px;
+    padding: 38px 38px 55px;
   }
 
   &__inner {
@@ -27,9 +27,11 @@
     margin-bottom: 38px;
     display: flex;
     justify-content: space-between;
+    gap: 28px;
   }
 
   &__btn {
+    display: flex;
     flex-shrink: 0;
     align-self: flex-start;
     margin-top: 43px;
@@ -37,7 +39,7 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     gap: 57px;
   }
@@ -112,6 +114,68 @@
     &__user-img {
       width: 26px;
       height: 26px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog {
+    &__items {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .blog {
+    &__wrapper {
+      padding: 28px 12px 58px;
+      border-radius: 42px;
+    }
+
+    &__header {
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__btn {
+      margin-top: 0;
+      align-self: flex-end;
+    }
+
+    &__item {
+      &__content {
+        padding: 12px;
+      }
+
+      &__img {
+        height: 195px;
+
+        img {
+          width: 124px;
+          height: 124px;
+        }
+      }
+
+      &__date,
+      &__title {
+        margin-bottom: 12px;
+      }
+
+      &__descr {
+        margin-bottom: 16px;
+      }
+
+      &__footer {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
     }
   }
 }
